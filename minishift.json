@@ -1,0 +1,24 @@
+{
+    "homepage": "https://docs.openshift.org/latest/minishift/index.html",
+    "license": "https://github.com/minishift/minishift/blob/master/LICENSE",
+    "version": "1.9.0",
+    "url": "https://github.com/minishift/minishift/releases/download/v1.9.0/minishift-1.9.0-windows-amd64.zip",
+    "hash": "14438dd79ca8933929bf17612408070f6294b659d5f380ec2905a6e62cb170b3",
+    "extract_dir": "minishift-1.9.0-windows-amd64",
+    "bin": [
+        [
+            "minishift.exe",
+            "minishift"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/minishift/minishift"
+    },
+    "autoupdate": {
+        "url": "https://github.com/minishift/minishift/releases/download/v$version/minishift-$version-windows-amd64.zip",
+	"extract_dir": "minishift-$version-windows-amd64",
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
